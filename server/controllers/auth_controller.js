@@ -12,7 +12,6 @@ module.exports = {
                 return res.status(403).send('Incorrect password.')
             delete user[0].password;
             req.session.user = user[0];
-            console.log(req.session.id, req.session.cookie);
             return res.status(200).send(req.session.user);
         } catch(err) {
             console.error('login error: ' + err);
