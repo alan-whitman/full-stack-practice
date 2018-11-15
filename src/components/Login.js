@@ -4,12 +4,10 @@ import { connect } from 'react-redux';
 import { userLoggedIn } from '../redux/reducer';
 import { Redirect } from 'react-router-dom';
 
-
 class Login extends Component {
     constructor() {
         super();
         this.state = {
-            name: '',
             email: '',
             password: ''
         }
@@ -18,7 +16,6 @@ class Login extends Component {
     handleInput(e) {
         const { name, value } = e.target;
         this.setState({[name]: value});
-
     }
     handleClick() {
         const { email, password } = this.state;

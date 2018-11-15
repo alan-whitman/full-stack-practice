@@ -32,7 +32,7 @@ app.get('/auth/currentUSer', ac.getCurrentUser)
 app.get('/api/posts', pc.getPosts);
 app.post('/api/posts', pc.createPost);
 app.put('/api/posts', pc.updatePost);
-app.delete('/api/posts', pc.deletePost);
+app.delete('/api/posts/:id', pc.deletePost);
 
 
 app.listen(port, () => console.log(port));

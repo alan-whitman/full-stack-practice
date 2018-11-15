@@ -17,7 +17,6 @@ class Register extends Component {
     handleInput(e) {
         const { name, value } = e.target;
         this.setState({[name]: value});
-
     }
     handleClick() {
         const { name, email, password } = this.state;
